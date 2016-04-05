@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">UIDemo</string>
+
+    <string name="exit_tips">Press Back again to quit.</string>
 </resources>

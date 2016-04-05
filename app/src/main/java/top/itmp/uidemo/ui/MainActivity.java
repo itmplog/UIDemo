@@ -6,16 +6,22 @@ import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
+import android.view.KeyEvent;
 import android.view.View;
+import android.widget.FrameLayout;
+import android.widget.Toast;
 
 import top.itmp.uidemo.R;
 import top.itmp.uidemo.base.BaseActivity;
+import top.itmp.uidemo.ui.fragment.MenuFragment;
+import top.itmp.uidemo.utils.MakeToast;
 
 public class MainActivity extends BaseActivity {
 
     private Toolbar mToolbar;
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mActionBarDrawerToggle;
+    private long exitTime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +50,23 @@ public class MainActivity extends BaseActivity {
         };
         mActionBarDrawerToggle.syncState();
         mDrawerLayout.addDrawerListener(mActionBarDrawerToggle);
+
+        transFragment(R.id.drawer_container, new MenuFragment());
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if(keyCode == KeyEvent.KEYCODE_BACK &&
+                event.getAction() == KeyEvent.ACTION_DOWN){
+            if(System.currentTimeMillis() - exitTime > 2000){
+                MakeToast.Short(getString(R.string.exit_tips));
+                exitTime = System.currentTimeMillis();
+            }else{
+                finish();
+            }
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
     }
 
     @Override

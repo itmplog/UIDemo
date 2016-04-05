@@ -19,7 +19,7 @@ public class BaseActivity extends AppCompatActivity {
         overridePendingTransition(R.anim.left_in, R.anim.right_out);
     }
 
-    public void setFragment(int view_id, Fragment fragment){
+    public void transFragment(int view_id, Fragment fragment){
         FragmentTransaction mFragmentTransaction = getSupportFragmentManager().beginTransaction();
         mFragmentTransaction.replace(view_id, fragment);
         mFragmentTransaction.commit();
