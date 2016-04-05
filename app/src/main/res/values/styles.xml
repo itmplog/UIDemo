@@ -12,8 +12,8 @@
         <!--status bar color-->
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <!--window background-->
-        <item name="android:background">@color/colorBackground</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/colorBackground</item>
+        <!--<item name="colorAccent">@color/colorAccent</item>-->
     </style>
 
     <!-- Normal application theme. -->
@@ -21,7 +21,7 @@
         <item name="actionBarStyle">@style/Appcompat.ActionBarStyle</item>
         <item name="drawerArrowStyle">@style/AppTheme.DrawerArrowStyle</item>
         <!--actionbar text color-->
-        <item name="android:textColorPrimary">@color/colorPrimaryText</item>
+        <item name="android:textColorPrimary">@color/textColorPrimary</item>
     </style>
 
     <!-- 设置标题栏样式 -->
@@ -38,6 +38,6 @@
     <!-- 标题栏文字样式 -->
     <style name="ActionBarTitleStyle" parent="Base.TextAppearance.AppCompat.Widget.ActionBar.Title">
         <item name="android:textSize">16sp</item>
-        <item name="android:textColor">@color/colorTitleText</item>
+        <item name="android:textColor">@color/titleTextColor</item>
     </style>
 </resources>
