@@ -1,5 +1,6 @@
 package top.itmp.uidemo.ui;
 
+import android.content.res.Configuration;
 import android.graphics.Color;
 import android.os.Bundle;
 
@@ -7,6 +8,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.Toast;
@@ -70,8 +72,26 @@ public class MainActivity extends BaseActivity {
     }
 
     @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if(mActionBarDrawerToggle.onOptionsItemSelected(item)){
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        mActionBarDrawerToggle.onConfigurationChanged(newConfig);
+    }
+
+    @Override
     protected void onStop() {
         super.onStop();
         mDrawerLayout.removeDrawerListener(mActionBarDrawerToggle);
+    }
+
+    public void closeDrawer(){
+        mDrawerLayout.closeDrawers();
     }
 }
