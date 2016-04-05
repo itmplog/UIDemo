@@ -1,12 +1,11 @@
 package top.itmp.uidemo.ui;
 
-import android.app.Activity;
 import android.graphics.Color;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.Toolbar;
+import android.support.v7.widget.Toolbar;
 
 import top.itmp.uidemo.R;
+import top.itmp.uidemo.base.BaseActivity;
 
 public class MainActivity extends BaseActivity {
 
@@ -20,5 +19,7 @@ public class MainActivity extends BaseActivity {
         mToolbar = (Toolbar)findViewById(R.id.toolbar);
         mToolbar.setTitleTextColor(Color.WHITE);
         setSupportActionBar(mToolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
     }
 }
