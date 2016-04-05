@@ -4,14 +4,13 @@ import android.content.res.Configuration;
 import android.graphics.Color;
 import android.os.Bundle;
 
+import android.support.v4.app.Fragment;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.FrameLayout;
-import android.widget.Toast;
 
 import top.itmp.uidemo.R;
 import top.itmp.uidemo.base.BaseActivity;
@@ -54,6 +53,7 @@ public class MainActivity extends BaseActivity {
         mDrawerLayout.addDrawerListener(mActionBarDrawerToggle);
 
         transFragment(R.id.drawer_container, new MenuFragment());
+        transFragment(R.id.frame_container, new Fragment());
     }
 
     @Override
