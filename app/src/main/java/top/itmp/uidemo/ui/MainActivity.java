@@ -49,11 +49,16 @@ public class MainActivity extends BaseActivity {
                 supportInvalidateOptionsMenu();
             }
         };
-        mActionBarDrawerToggle.syncState();
-        mDrawerLayout.addDrawerListener(mActionBarDrawerToggle);
 
         transFragment(R.id.drawer_container, new MenuFragment());
         transFragment(R.id.frame_container, new Fragment());
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        mActionBarDrawerToggle.syncState();
+        mDrawerLayout.addDrawerListener(mActionBarDrawerToggle);
     }
 
     @Override
