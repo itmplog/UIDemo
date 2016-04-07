@@ -20,7 +20,11 @@
         android:layout_centerVertical="true"
         android:layout_marginLeft="72dp"
         android:text="sdfdsf"
-        android:textColor="#ffffffff"
         android:textSize="15sp" />
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/widget_bottom_shadow" />
 </RelativeLayout>

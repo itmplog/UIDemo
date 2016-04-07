@@ -18,7 +18,7 @@
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/ic_settings_white_24dp"
+                android:src="@drawable/ic_settings_black_48dp"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="16dp"
                 android:scaleType="fitXY" />
@@ -30,7 +30,6 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="72dp"
                 android:text="设置"
-                android:textColor="#FFF"
                 android:textSize="15sp" />
 
         </RelativeLayout>

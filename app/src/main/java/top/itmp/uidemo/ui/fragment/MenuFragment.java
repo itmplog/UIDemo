@@ -123,5 +123,8 @@ public class MenuFragment extends BaseFragment {
         mAdapter.menuItems.add(new MenuItem(Dummy.dummy(), R.mipmap.ic_launcher));
         mAdapter.menuItems.add(new MenuItem(Dummy.dummy(), R.mipmap.ic_launcher));
         mAdapter.menuItems.add(new MenuItem(Dummy.dummy(), R.mipmap.ic_launcher));
+        mAdapter.menuItems.add(new MenuItem(Dummy.dummy(), R.mipmap.ic_launcher));
+        mAdapter.menuItems.add(new MenuItem(Dummy.dummy(), R.mipmap.ic_launcher));
+        mAdapter.menuItems.add(new MenuItem(Dummy.dummy(), R.mipmap.ic_launcher));
     }
 }
