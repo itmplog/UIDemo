@@ -27,11 +27,13 @@
     <!-- 设置标题栏样式 -->
     <style name="Appcompat.ActionBarStyle" parent="Widget.AppCompat.Light.ActionBar">
         <item name="titleTextStyle">@style/ActionBarTitleStyle</item>
+        <!-- Arrow Color -->
+        <item name="colorControlNormal">@android:color/white</item>
     </style>
 
     <style name="AppTheme.DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
         <!--是否开启导航图标的旋转效果-->
-        <item name="spinBars">false</item>
+        <item name="spinBars">true</item>
         <item name="color">@android:color/white</item>
     </style>
 
@@ -39,5 +41,11 @@
     <style name="ActionBarTitleStyle" parent="Base.TextAppearance.AppCompat.Widget.ActionBar.Title">
         <item name="android:textSize">16sp</item>
         <item name="android:textColor">@color/titleTextColor</item>
+    </style>
+
+    <!-- 设置主题 Maybe useless-->
+    <style name="SettingsActivityTheme" parent="@style/AppTheme">
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="windowActionBarOverlay">true</item>
     </style>
 </resources>

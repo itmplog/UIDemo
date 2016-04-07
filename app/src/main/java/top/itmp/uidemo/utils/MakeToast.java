@@ -10,11 +10,11 @@ import top.itmp.uidemo.base.TopApplication;
  */
 public class MakeToast {
 
-    public static void Short(CharSequence charSequence){
+    public static void Short(CharSequence charSequence) {
         Toast.makeText(TopApplication.mContext, charSequence, Toast.LENGTH_SHORT).show();
     }
 
-    public static void Long(CharSequence charSequence){
+    public static void Long(CharSequence charSequence) {
         Toast.makeText(TopApplication.mContext, charSequence, Toast.LENGTH_LONG).show();
     }
 }

@@ -1,7 +1,5 @@
 package top.itmp.uidemo.base;
 
-
-import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
@@ -19,7 +17,7 @@ public class BaseActivity extends AppCompatActivity {
         overridePendingTransition(R.anim.left_in, R.anim.right_out);
     }
 
-    public void transFragment(int view_id, Fragment fragment){
+    public void transFragment(int view_id, Fragment fragment) {
         FragmentTransaction mFragmentTransaction = getSupportFragmentManager().beginTransaction();
         mFragmentTransaction.replace(view_id, fragment);
         mFragmentTransaction.commit();

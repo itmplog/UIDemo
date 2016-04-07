@@ -3,7 +3,6 @@ package top.itmp.uidemo.ui;
 import android.content.res.Configuration;
 import android.graphics.Color;
 import android.os.Bundle;
-
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -29,14 +28,14 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mToolbar = (Toolbar)findViewById(R.id.toolbar);
-        mDrawerLayout = (DrawerLayout)findViewById(R.id.drawer_layout);
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
 
         mToolbar.setTitleTextColor(Color.WHITE);
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        mActionBarDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.app_name, R.string.app_name){
+        mActionBarDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.app_name, R.string.app_name) {
             @Override
             public void onDrawerOpened(View drawerView) {
                 //super.onDrawerOpened(drawerView);
@@ -63,12 +62,12 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if(keyCode == KeyEvent.KEYCODE_BACK &&
-                event.getAction() == KeyEvent.ACTION_DOWN){
-            if(System.currentTimeMillis() - exitTime > 2000){
+        if (keyCode == KeyEvent.KEYCODE_BACK &&
+                event.getAction() == KeyEvent.ACTION_DOWN) {
+            if (System.currentTimeMillis() - exitTime > 2000) {
                 MakeToast.Short(getString(R.string.exit_tips));
                 exitTime = System.currentTimeMillis();
-            }else{
+            } else {
                 finish();
             }
             return true;
@@ -78,7 +77,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if(mActionBarDrawerToggle.onOptionsItemSelected(item)){
+        if (mActionBarDrawerToggle.onOptionsItemSelected(item)) {
             return true;
         }
         return super.onOptionsItemSelected(item);
@@ -96,7 +95,7 @@ public class MainActivity extends BaseActivity {
         mDrawerLayout.removeDrawerListener(mActionBarDrawerToggle);
     }
 
-    public void closeDrawer(){
+    public void closeDrawer() {
         mDrawerLayout.closeDrawers();
     }
 }
