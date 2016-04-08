@@ -18,11 +18,12 @@ import android.widget.LinearLayout;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import top.itmp.uidemo.R;
+import top.itmp.uidemo.base.BaseActivity;
 
 /**
  * Created by hz on 2016/4/7.
  */
-public class SettingsActivity extends AppCompatActivity {
+public class SettingsActivity extends BaseActivity {
 
     private static final AtomicInteger sNextGeneratedId = new AtomicInteger(1);
 
@@ -75,7 +76,7 @@ public class SettingsActivity extends AppCompatActivity {
         /** 1. setup UpArrow **/
         getSupportActionBar().setHomeAsUpIndicator(upArrow);
         /** 2. setup UpArrow **/
-        toolbar.setNavigationIcon(upArrow);
+        //toolbar.setNavigationIcon(upArrow);
 
         getFragmentManager().beginTransaction().replace(frameLayout.getId(), new PreferenceFragment() {
             @Override
@@ -87,7 +88,7 @@ public class SettingsActivity extends AppCompatActivity {
                 preference.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
                     @Override
                     public boolean onPreferenceClick(Preference preference) {
-                        new AlertDialog.Builder(getContext())
+                        new AlertDialog.Builder(SettingsActivity.this)
                                 .setIcon(R.mipmap.ic_launcher)
                                 .setTitle(preference.getTitle())
                                 .setMessage(preference.getSummary())

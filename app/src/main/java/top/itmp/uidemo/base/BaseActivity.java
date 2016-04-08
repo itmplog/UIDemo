@@ -22,4 +22,10 @@ public class BaseActivity extends AppCompatActivity {
         mFragmentTransaction.replace(view_id, fragment);
         mFragmentTransaction.commit();
     }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        TopApplication.getRefWatcher(this).watch(this);
+    }
 }
