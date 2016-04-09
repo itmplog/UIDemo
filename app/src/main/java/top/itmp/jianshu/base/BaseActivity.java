@@ -1,10 +1,10 @@
-package top.itmp.uidemo.base;
+package top.itmp.jianshu.base;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 
-import top.itmp.uidemo.R;
+import top.itmp.jianshu.R;
 
 /**
  * Created by hz on 2016/4/5.

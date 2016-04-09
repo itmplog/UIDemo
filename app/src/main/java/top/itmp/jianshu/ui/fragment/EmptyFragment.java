@@ -1,4 +1,4 @@
-package top.itmp.uidemo.ui.fragment;
+package top.itmp.jianshu.ui.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -7,7 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import top.itmp.uidemo.R;
+import top.itmp.jianshu.R;
 
 /**
  * Created by hz on 2016/4/7.

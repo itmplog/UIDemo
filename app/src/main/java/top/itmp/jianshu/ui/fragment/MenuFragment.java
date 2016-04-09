@@ -1,4 +1,4 @@
-package top.itmp.uidemo.ui.fragment;
+package top.itmp.jianshu.ui.fragment;
 
 import android.content.Context;
 import android.content.Intent;
@@ -16,12 +16,12 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import top.itmp.dummy.Dummy;
-import top.itmp.uidemo.R;
-import top.itmp.uidemo.base.BaseFragment;
-import top.itmp.uidemo.model.MenuItem;
-import top.itmp.uidemo.ui.MainActivity;
-import top.itmp.uidemo.ui.SettingsActivity;
-import top.itmp.uidemo.utils.MakeToast;
+import top.itmp.jianshu.R;
+import top.itmp.jianshu.base.BaseFragment;
+import top.itmp.jianshu.model.MenuItem;
+import top.itmp.jianshu.ui.MainActivity;
+import top.itmp.jianshu.ui.SettingsActivity;
+import top.itmp.jianshu.utils.MakeToast;
 
 /**
  * Created by hz on 2016/4/6.

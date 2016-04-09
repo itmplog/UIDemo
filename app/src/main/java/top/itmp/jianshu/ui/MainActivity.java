@@ -1,4 +1,4 @@
-package top.itmp.uidemo.ui;
+package top.itmp.jianshu.ui;
 
 import android.content.res.Configuration;
 import android.graphics.Color;
@@ -11,10 +11,10 @@ import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
 
-import top.itmp.uidemo.R;
-import top.itmp.uidemo.base.BaseActivity;
-import top.itmp.uidemo.ui.fragment.MenuFragment;
-import top.itmp.uidemo.utils.MakeToast;
+import top.itmp.jianshu.R;
+import top.itmp.jianshu.base.BaseActivity;
+import top.itmp.jianshu.ui.fragment.MenuFragment;
+import top.itmp.jianshu.utils.MakeToast;
 
 public class MainActivity extends BaseActivity {
 

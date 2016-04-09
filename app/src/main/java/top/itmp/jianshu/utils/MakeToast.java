@@ -1,9 +1,9 @@
-package top.itmp.uidemo.utils;
+package top.itmp.jianshu.utils;
 
 
 import android.widget.Toast;
 
-import top.itmp.uidemo.base.TopApplication;
+import top.itmp.jianshu.base.TopApplication;
 
 /**
  * Created by hz on 2016/4/6.

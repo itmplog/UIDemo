@@ -1,4 +1,4 @@
-package top.itmp.uidemo.ui;
+package top.itmp.jianshu.ui;
 
 import android.app.AlertDialog;
 import android.graphics.Color;
@@ -8,7 +8,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,8 +16,8 @@ import android.widget.LinearLayout;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
-import top.itmp.uidemo.R;
-import top.itmp.uidemo.base.BaseActivity;
+import top.itmp.jianshu.R;
+import top.itmp.jianshu.base.BaseActivity;
 
 /**
  * Created by hz on 2016/4/7.

@@ -1,4 +1,4 @@
-package top.itmp.uidemo.model;
+package top.itmp.jianshu.model;
 
 import java.util.ArrayList;
 

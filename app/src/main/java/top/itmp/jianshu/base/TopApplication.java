@@ -1,4 +1,4 @@
-package top.itmp.uidemo.base;
+package top.itmp.jianshu.base;
 
 import android.app.Application;
 import android.content.Context;
