@@ -14,6 +14,7 @@ import android.view.View;
 import top.itmp.uidemo.R;
 import top.itmp.uidemo.base.BaseActivity;
 import top.itmp.uidemo.ui.fragment.MenuFragment;
+import top.itmp.uidemo.ui.fragment.RecyclerViewFragment;
 import top.itmp.uidemo.utils.MakeToast;
 
 public class MainActivity extends BaseActivity {
@@ -50,7 +51,7 @@ public class MainActivity extends BaseActivity {
         };
 
         transFragment(R.id.drawer_container, new MenuFragment());
-        transFragment(R.id.frame_container, new Fragment());
+        transFragment(R.id.frame_container, new RecyclerViewFragment());
     }
 
     @Override
