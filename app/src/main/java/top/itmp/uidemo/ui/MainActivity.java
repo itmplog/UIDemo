@@ -38,13 +38,13 @@ public class MainActivity extends BaseActivity {
         mActionBarDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.app_name, R.string.app_name) {
             @Override
             public void onDrawerOpened(View drawerView) {
-                //super.onDrawerOpened(drawerView);
+                super.onDrawerOpened(drawerView);
                 supportInvalidateOptionsMenu();
             }
 
             @Override
             public void onDrawerClosed(View drawerView) {
-                //super.onDrawerClosed(drawerView);
+                super.onDrawerClosed(drawerView);
                 supportInvalidateOptionsMenu();
             }
         };
