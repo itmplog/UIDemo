@@ -21,7 +21,7 @@ public class TopApplication extends Application {
        mRefWatcher = LeakCanary.install(this);
     }
 
-    public static Context getmContext(){
+    public static Context getContext(){
         return mContext;
     }
 
