@@ -28,7 +28,7 @@ import top.itmp.uidemo.utils.MakeToast;
  */
 public class MenuFragment extends BaseFragment {
 
-    private Context mContext;
+    private MainActivity mainActivity;
     private RecyclerView mRecyclerView;
     private RelativeLayout mRelativeLayout;
     private MenuAdapter mAdapter;
@@ -37,7 +37,7 @@ public class MenuFragment extends BaseFragment {
     public void onAttach(Context context) {
         super.onAttach(context);
         if (context instanceof MainActivity) {
-            mContext = context;
+            mainActivity = (MainActivity)context;
         } else {
             throw new IllegalArgumentException("The Activity must be MainActivity!");
         }
@@ -48,14 +48,14 @@ public class MenuFragment extends BaseFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_drawer, container, false);
         mRecyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(mContext));
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
         mRelativeLayout = (RelativeLayout) view.findViewById(R.id.realtive_layout);
         mRelativeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(mContext, SettingsActivity.class));
-                ((MainActivity) mContext).closeDrawer();
+                startActivity(new Intent(getActivity(), SettingsActivity.class));
+                mainActivity.closeDrawer();
             }
         });
         return view;
@@ -93,7 +93,7 @@ public class MenuFragment extends BaseFragment {
                 @Override
                 public void onClick(View v) {
                     MakeToast.Short(menuItem.getTitle());
-                    ((MainActivity) mContext).closeDrawer();
+                    mainActivity.closeDrawer();
                 }
             });
         }
