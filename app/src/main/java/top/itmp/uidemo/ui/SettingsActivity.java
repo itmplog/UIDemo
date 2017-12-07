@@ -1,14 +1,10 @@
 package top.itmp.uidemo.ui;
 
-import android.app.AlertDialog;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
-import android.preference.Preference;
-import android.preference.PreferenceFragment;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,6 +15,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 import top.itmp.uidemo.R;
 import top.itmp.uidemo.base.BaseActivity;
+import top.itmp.uidemo.ui.fragment.MainPreferenceFragment;
 
 /**
  * Created by hz on 2016/4/7.
@@ -69,7 +66,7 @@ public class SettingsActivity extends BaseActivity {
         supportInvalidateOptionsMenu();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        final Drawable upArrow = getUpArrow(R.drawable.abc_ic_ab_back_mtrl_am_alpha);
+        final Drawable upArrow = getUpArrow(android.support.v7.appcompat.R.drawable.abc_ic_ab_back_material);
         // parse the UpArrow Color
         upArrow.setColorFilter(Color.WHITE, PorterDuff.Mode.SRC_ATOP);
 
@@ -78,29 +75,7 @@ public class SettingsActivity extends BaseActivity {
         /** 2. setup UpArrow **/
         //toolbar.setNavigationIcon(upArrow);
 
-        getFragmentManager().beginTransaction().replace(frameLayout.getId(), new PreferenceFragment() {
-            @Override
-            public void onCreate(Bundle savedInstanceState) {
-                super.onCreate(savedInstanceState);
-                addPreferencesFromResource(R.xml.settings);
-
-                Preference preference = findPreference("preference");
-                preference.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
-                    @Override
-                    public boolean onPreferenceClick(Preference preference) {
-                        new AlertDialog.Builder(SettingsActivity.this)
-                                .setIcon(R.mipmap.ic_launcher)
-                                .setTitle(preference.getTitle())
-                                .setMessage(preference.getSummary())
-                                .setNegativeButton(android.R.string.cancel, null)
-                                .setPositiveButton(android.R.string.ok, null)
-                                .create()
-                                .show();
-                        return true;
-                    }
-                });
-            }
-        }).commit();
+        getFragmentManager().beginTransaction().replace(frameLayout.getId(), MainPreferenceFragment.instance()).commit();
     }
 
     private Drawable getUpArrow(int id) {
